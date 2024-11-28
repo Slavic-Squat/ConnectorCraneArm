@@ -38,7 +38,7 @@ namespace IngameScript
                 controller = (IMyShipController)program.GridTerminalSystem.GetBlockWithName($"Connector Arm Controller {ID}");
                 controllerScreens = (IMyTextSurfaceProvider)controller;
 
-                craneArm = new CraneArm(program, ID, 10, 10, controller, 0.1f, 2, false);
+                craneArm = new CraneArm(program, ID, controller, 0.1f, 2, false);
             }
 
             public void Run()
